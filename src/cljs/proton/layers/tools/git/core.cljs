@@ -59,7 +59,12 @@
   [{:selector ".atomatigit .file-list-view" :keymap [["s" "atomatigit:stage"]
                                                      ["d" "atomatigit:toggle-diff"]
                                                      ["u" "atomatigit:unstage"]
-                                                     ["q" "core:cancel"]]}])
+                                                     ["q" "core:cancel"]]}
+   { :selector "atom-panel-container.right .item-views"
+     :keymap [["g t" "github:toggle-git-tab-focus"]]}
+   { :selector ".github-Github-root"
+     :keymap [["j" "core:move-down"]
+              ["k" "core:move-up"]]}])
 
 (defmethod get-initial-config :tools/git [] [])
 
